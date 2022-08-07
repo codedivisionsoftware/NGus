@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>Library for downloading data from the Polish Central Statistical Office (GUS - Główny Urząd Statystyczny)</Description>
+    <Version>1.0.1</Version>
+    <Copyright>Copyright (C) 2022 CodeDivision - Radosław Bujak</Copyright>
+    <Company>CodeDivision - Radosław Bujak</Company>
+    <PackageTags>NGus, GUS, Główny Urząd Statystyczny, Central Statistical Office</PackageTags>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
+    <FileVersion>1.0.1</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ServiceModel.Http" Version="4.9.0" />
+    <PackageReference Include="System.ServiceModel.Primitives" Version="4.9.0" />
+    <PackageReference Include="WcfCoreMtomEncoder" Version="0.1.16" />
+  </ItemGroup>
+
+</Project>
