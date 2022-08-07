@@ -1,4 +1,4 @@
-﻿namespace NGus.Lib.Models
+﻿namespace NGus.Models
 {
     public class NationalCourtRegisterModel
     {

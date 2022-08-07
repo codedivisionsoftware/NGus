@@ -3,9 +3,9 @@ using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.Threading.Tasks;
 using InvoicePro.Api.Services.UslugaBIRzewnPubl;
-using NGus.Lib.Enumerations;
-using NGus.Lib.Helpers;
-using NGus.Lib.Models;
+using NGus.Enumerations;
+using NGus.Helpers;
+using NGus.Models;
 using WcfCoreMtomEncoder;
 
 namespace NGus.Contexts
@@ -30,6 +30,14 @@ namespace NGus.Contexts
 
             using (new OperationContextScope(_client?.InnerChannel))
             {
+                OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = new HttpRequestMessageProperty
+                {
+                    Headers =
+                    {
+                        { "sid", _signInResponse?.ZalogujResult }
+                    }
+                };
+
                 if (_client != null)
                 {
                     var dataSearchEntitiesResponse = await SearchEntity(EntityType.NationalCourtRegister, nationalCourtRegister);
@@ -48,14 +56,6 @@ namespace NGus.Contexts
                 Endpoint =
                 {
                     Binding = new CustomBinding(new MtomMessageEncoderBindingElement(new TextMessageEncodingBindingElement()), new HttpsTransportBindingElement())
-                }
-            };
-
-            OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = new HttpRequestMessageProperty
-            {
-                Headers =
-                {
-                    { "sid", _signInResponse?.ZalogujResult }
                 }
             };
         }

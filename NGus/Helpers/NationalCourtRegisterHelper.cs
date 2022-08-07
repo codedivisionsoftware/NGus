@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
-using NGus.Lib.Models;
+using NGus.Models;
 
-namespace NGus.Lib.Helpers
+namespace NGus.Helpers
 {
     internal static class NationalCourtRegisterHelper
     {
@@ -18,7 +18,7 @@ namespace NGus.Lib.Helpers
 
             try
             {
-                xDocument = XDocument.Load(xml);
+                xDocument = XDocument.Parse(xml);
             }
             catch
             {

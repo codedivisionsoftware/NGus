@@ -1,4 +1,4 @@
-﻿namespace NGus.Lib.Enumerations
+﻿namespace NGus.Enumerations
 {
     internal enum EntityType
     {
