@@ -8,16 +8,16 @@ using NGus.Lib.Helpers;
 using NGus.Lib.Models;
 using WcfCoreMtomEncoder;
 
-namespace NGus.Lib
+namespace NGus.Contexts
 {
-    public class NGus
+    public class NGusContext
     {
         private readonly string _userKey;
 
         private UslugaBIRzewnPublClient _client;
         private ZalogujResponse _signInResponse;
 
-        public NGus(string userKey)
+        public NGusContext(string userKey)
         {
             _userKey = userKey;
             InitializeClient();
