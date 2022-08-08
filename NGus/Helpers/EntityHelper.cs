@@ -6,9 +6,9 @@ using NGus.Models;
 
 namespace NGus.Helpers
 {
-    internal static class NationalCourtRegisterHelper
+    internal static class EntityHelper
     {
-        public static IEnumerable<NationalCourtRegisterModel> Parse(string xml)
+        public static IEnumerable<EntityModel> Parse(string xml)
         {
             if (string.IsNullOrEmpty(xml) || string.IsNullOrWhiteSpace(xml))
             {
@@ -29,7 +29,7 @@ namespace NGus.Helpers
             var xRoot = xDocument.Root;
             var xData = xRoot?.Elements("dane").ToList();
 
-            var nationalCourtRegisters = new List<NationalCourtRegisterModel>();
+            var entities = new List<EntityModel>();
 
             if (xData != null && xData.Any())
             {
@@ -88,7 +88,7 @@ namespace NGus.Helpers
                     var xPostOfficeLocation = xSingleData?.Element("MiejscowoscPoczty");
                     var postOfficeLocation = !string.IsNullOrEmpty(xPostOfficeLocation?.Value) && !string.IsNullOrWhiteSpace(xPostOfficeLocation.Value) ? xPostOfficeLocation.Value : null;
 
-                    nationalCourtRegisters.Add(new NationalCourtRegisterModel
+                    entities.Add(new EntityModel
                     {
                         NationalBusinessRegistryNumber = nationalBusinessRegistryNumber,
                         TaxpayerIdentificationNumber = taxpayerIdentificationNumber,
@@ -110,7 +110,7 @@ namespace NGus.Helpers
                 }
             }
 
-            return nationalCourtRegisters;
+            return entities;
         }
     }
 }

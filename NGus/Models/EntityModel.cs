@@ -2,7 +2,7 @@
 
 namespace NGus.Models
 {
-    public class NationalCourtRegisterModel
+    public class EntityModel
     {
         public string NationalBusinessRegistryNumber { get; set; }
         public string TaxpayerIdentificationNumber { get; set; }

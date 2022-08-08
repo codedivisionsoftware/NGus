@@ -23,7 +23,7 @@ namespace NGus.Contexts
             InitializeClient();
         }
 
-        public async Task<IEnumerable<NationalCourtRegisterModel>> GetDataFromNationalCourtRegister(string nationalCourtRegister)
+        public async Task<IEnumerable<EntityModel>> GetEntity(DataType dataType, string number)
         {
             await SignIn();
             string xml = null;
@@ -40,13 +40,13 @@ namespace NGus.Contexts
 
                 if (_client != null)
                 {
-                    var dataSearchEntitiesResponse = await SearchEntity(EntityType.NationalCourtRegister, nationalCourtRegister);
+                    var dataSearchEntitiesResponse = await SearchEntity(dataType, number);
                     xml = dataSearchEntitiesResponse?.DaneSzukajPodmiotyResult;
                 }
             }
 
             await SignOut();
-            return NationalCourtRegisterHelper.Parse(xml);
+            return EntityHelper.Parse(xml);
         }
 
         private void InitializeClient()
@@ -70,26 +70,26 @@ namespace NGus.Contexts
             _signInResponse = await _client.ZalogujAsync(new ZalogujRequest(_userKey));
         }
 
-        private async Task<DaneSzukajPodmiotyResponse> SearchEntity(EntityType entityType, string value)
+        private async Task<DaneSzukajPodmiotyResponse> SearchEntity(DataType dataType, string number)
         {
-            switch (entityType)
+            switch (dataType)
             {
-                case EntityType.TaxpayerIdentificationNumber:
+                case DataType.TaxpayerIdentificationNumber:
                     return await _client.DaneSzukajPodmiotyAsync(new DaneSzukajPodmiotyRequest(new ParametryWyszukiwania
                     {
-                        Nip = value
+                        Nip = number
                     }));
 
-                case EntityType.NationalBusinessRegistryNumber:
+                case DataType.NationalBusinessRegistryNumber:
                     return await _client.DaneSzukajPodmiotyAsync(new DaneSzukajPodmiotyRequest(new ParametryWyszukiwania
                     {
-                        Regon = value
+                        Regon = number
                     }));
 
-                case EntityType.NationalCourtRegister:
+                case DataType.NationalCourtRegister:
                     return await _client.DaneSzukajPodmiotyAsync(new DaneSzukajPodmiotyRequest(new ParametryWyszukiwania
                     {
-                        Krs = value
+                        Krs = number
                     }));
 
                 default:

@@ -1,6 +1,6 @@
 ﻿namespace NGus.Enumerations
 {
-    internal enum EntityType
+    public enum DataType
     {
         TaxpayerIdentificationNumber,
         NationalBusinessRegistryNumber,
