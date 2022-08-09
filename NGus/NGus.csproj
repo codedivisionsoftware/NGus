@@ -3,12 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Description>Library for downloading data from the Polish Central Statistical Office (GUS - Główny Urząd Statystyczny)</Description>
-    <Version>1.0.10</Version>
+    <Version>1.0.12</Version>
     <Copyright>Copyright (C) 2022 CodeDivision - Radosław Bujak</Copyright>
     <Company>CodeDivision - Radosław Bujak</Company>
     <PackageTags>NGus, GUS, Główny Urząd Statystyczny, Central Statistical Office</PackageTags>
-    <AssemblyVersion>1.0.10</AssemblyVersion>
-    <FileVersion>1.0.10</FileVersion>
+    <AssemblyVersion>1.0.12</AssemblyVersion>
+    <FileVersion>1.0.12</FileVersion>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InvoicePro.Api.Services.UslugaBIRzewnPubl
+namespace NGus.Services.UslugaBIRzewnPubl
 {
     using System.Runtime.Serialization;
     
@@ -125,27 +125,27 @@ namespace InvoicePro.Api.Services.UslugaBIRzewnPubl
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="InvoicePro.Api.Services.UslugaBIRzewnPubl.IUslugaBIRzewnPubl")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName= "NGus.Services.UslugaBIRzewnPubl.IUslugaBIRzewnPubl")]
     public interface IUslugaBIRzewnPubl
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://CIS/BIR/2014/07/IUslugaBIR/GetValue", ReplyAction="http://CIS/BIR/2014/07/IUslugaBIR/GetValueResponse")]
-        System.Threading.Tasks.Task<InvoicePro.Api.Services.UslugaBIRzewnPubl.GetValueResponse> GetValueAsync(InvoicePro.Api.Services.UslugaBIRzewnPubl.GetValueRequest request);
+        System.Threading.Tasks.Task<NGus.Services.UslugaBIRzewnPubl.GetValueResponse> GetValueAsync(NGus.Services.UslugaBIRzewnPubl.GetValueRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/Zaloguj", ReplyAction="http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/ZalogujResponse")]
-        System.Threading.Tasks.Task<InvoicePro.Api.Services.UslugaBIRzewnPubl.ZalogujResponse> ZalogujAsync(InvoicePro.Api.Services.UslugaBIRzewnPubl.ZalogujRequest request);
+        System.Threading.Tasks.Task<NGus.Services.UslugaBIRzewnPubl.ZalogujResponse> ZalogujAsync(NGus.Services.UslugaBIRzewnPubl.ZalogujRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/Wyloguj", ReplyAction="http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/WylogujResponse")]
-        System.Threading.Tasks.Task<InvoicePro.Api.Services.UslugaBIRzewnPubl.WylogujResponse> WylogujAsync(InvoicePro.Api.Services.UslugaBIRzewnPubl.WylogujRequest request);
+        System.Threading.Tasks.Task<NGus.Services.UslugaBIRzewnPubl.WylogujResponse> WylogujAsync(NGus.Services.UslugaBIRzewnPubl.WylogujRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/DaneSzukajPodmioty", ReplyAction="http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/DaneSzukajPodmiotyResponse")]
-        System.Threading.Tasks.Task<InvoicePro.Api.Services.UslugaBIRzewnPubl.DaneSzukajPodmiotyResponse> DaneSzukajPodmiotyAsync(InvoicePro.Api.Services.UslugaBIRzewnPubl.DaneSzukajPodmiotyRequest request);
+        System.Threading.Tasks.Task<NGus.Services.UslugaBIRzewnPubl.DaneSzukajPodmiotyResponse> DaneSzukajPodmiotyAsync(NGus.Services.UslugaBIRzewnPubl.DaneSzukajPodmiotyRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/DanePobierzPelnyRaport", ReplyAction="http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/DanePobierzPelnyRaportResponse")]
-        System.Threading.Tasks.Task<InvoicePro.Api.Services.UslugaBIRzewnPubl.DanePobierzPelnyRaportResponse> DanePobierzPelnyRaportAsync(InvoicePro.Api.Services.UslugaBIRzewnPubl.DanePobierzPelnyRaportRequest request);
+        System.Threading.Tasks.Task<NGus.Services.UslugaBIRzewnPubl.DanePobierzPelnyRaportResponse> DanePobierzPelnyRaportAsync(NGus.Services.UslugaBIRzewnPubl.DanePobierzPelnyRaportRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/DanePobierzRaportZbiorczy", ReplyAction="http://CIS/BIR/PUBL/2014/07/IUslugaBIRzewnPubl/DanePobierzRaportZbiorczyResponse")]
-        System.Threading.Tasks.Task<InvoicePro.Api.Services.UslugaBIRzewnPubl.DanePobierzRaportZbiorczyResponse> DanePobierzRaportZbiorczyAsync(InvoicePro.Api.Services.UslugaBIRzewnPubl.DanePobierzRaportZbiorczyRequest request);
+        System.Threading.Tasks.Task<NGus.Services.UslugaBIRzewnPubl.DanePobierzRaportZbiorczyResponse> DanePobierzRaportZbiorczyAsync(NGus.Services.UslugaBIRzewnPubl.DanePobierzRaportZbiorczyRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -155,13 +155,13 @@ namespace InvoicePro.Api.Services.UslugaBIRzewnPubl
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetValue", Namespace="http://CIS/BIR/2014/07", Order=0)]
-        public InvoicePro.Api.Services.UslugaBIRzewnPubl.GetValueRequestBody Body;
+        public NGus.Services.UslugaBIRzewnPubl.GetValueRequestBody Body;
         
         public GetValueRequest()
         {
         }
         
-        public GetValueRequest(InvoicePro.Api.Services.UslugaBIRzewnPubl.GetValueRequestBody Body)
+        public GetValueRequest(NGus.Services.UslugaBIRzewnPubl.GetValueRequestBody Body)
         {
             this.Body = Body;
         }
@@ -193,13 +193,13 @@ namespace InvoicePro.Api.Services.UslugaBIRzewnPubl
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetValueResponse", Namespace="http://CIS/BIR/2014/07", Order=0)]
-        public InvoicePro.Api.Services.UslugaBIRzewnPubl.GetValueResponseBody Body;
+        public NGus.Services.UslugaBIRzewnPubl.GetValueResponseBody Body;
         
         public GetValueResponse()
         {
         }
         
-        public GetValueResponse(InvoicePro.Api.Services.UslugaBIRzewnPubl.GetValueResponseBody Body)
+        public GetValueResponse(NGus.Services.UslugaBIRzewnPubl.GetValueResponseBody Body)
         {
             this.Body = Body;
         }
@@ -307,13 +307,13 @@ namespace InvoicePro.Api.Services.UslugaBIRzewnPubl
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://CIS/BIR/PUBL/2014/07", Order=0)]
-        public InvoicePro.Api.Services.UslugaBIRzewnPubl.ParametryWyszukiwania pParametryWyszukiwania;
+        public NGus.Services.UslugaBIRzewnPubl.ParametryWyszukiwania pParametryWyszukiwania;
         
         public DaneSzukajPodmiotyRequest()
         {
         }
         
-        public DaneSzukajPodmiotyRequest(InvoicePro.Api.Services.UslugaBIRzewnPubl.ParametryWyszukiwania pParametryWyszukiwania)
+        public DaneSzukajPodmiotyRequest(NGus.Services.UslugaBIRzewnPubl.ParametryWyszukiwania pParametryWyszukiwania)
         {
             this.pParametryWyszukiwania = pParametryWyszukiwania;
         }
@@ -423,13 +423,13 @@ namespace InvoicePro.Api.Services.UslugaBIRzewnPubl
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    public interface IUslugaBIRzewnPublChannel : InvoicePro.Api.Services.UslugaBIRzewnPubl.IUslugaBIRzewnPubl, System.ServiceModel.IClientChannel
+    public interface IUslugaBIRzewnPublChannel : NGus.Services.UslugaBIRzewnPubl.IUslugaBIRzewnPubl, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    public partial class UslugaBIRzewnPublClient : System.ServiceModel.ClientBase<InvoicePro.Api.Services.UslugaBIRzewnPubl.IUslugaBIRzewnPubl>, InvoicePro.Api.Services.UslugaBIRzewnPubl.IUslugaBIRzewnPubl
+    public partial class UslugaBIRzewnPublClient : System.ServiceModel.ClientBase<NGus.Services.UslugaBIRzewnPubl.IUslugaBIRzewnPubl>, NGus.Services.UslugaBIRzewnPubl.IUslugaBIRzewnPubl
     {
         
         /// <summary>
@@ -472,32 +472,32 @@ namespace InvoicePro.Api.Services.UslugaBIRzewnPubl
         {
         }
         
-        public System.Threading.Tasks.Task<InvoicePro.Api.Services.UslugaBIRzewnPubl.GetValueResponse> GetValueAsync(InvoicePro.Api.Services.UslugaBIRzewnPubl.GetValueRequest request)
+        public System.Threading.Tasks.Task<NGus.Services.UslugaBIRzewnPubl.GetValueResponse> GetValueAsync(NGus.Services.UslugaBIRzewnPubl.GetValueRequest request)
         {
             return base.Channel.GetValueAsync(request);
         }
         
-        public System.Threading.Tasks.Task<InvoicePro.Api.Services.UslugaBIRzewnPubl.ZalogujResponse> ZalogujAsync(InvoicePro.Api.Services.UslugaBIRzewnPubl.ZalogujRequest request)
+        public System.Threading.Tasks.Task<NGus.Services.UslugaBIRzewnPubl.ZalogujResponse> ZalogujAsync(NGus.Services.UslugaBIRzewnPubl.ZalogujRequest request)
         {
             return base.Channel.ZalogujAsync(request);
         }
         
-        public System.Threading.Tasks.Task<InvoicePro.Api.Services.UslugaBIRzewnPubl.WylogujResponse> WylogujAsync(InvoicePro.Api.Services.UslugaBIRzewnPubl.WylogujRequest request)
+        public System.Threading.Tasks.Task<NGus.Services.UslugaBIRzewnPubl.WylogujResponse> WylogujAsync(NGus.Services.UslugaBIRzewnPubl.WylogujRequest request)
         {
             return base.Channel.WylogujAsync(request);
         }
         
-        public System.Threading.Tasks.Task<InvoicePro.Api.Services.UslugaBIRzewnPubl.DaneSzukajPodmiotyResponse> DaneSzukajPodmiotyAsync(InvoicePro.Api.Services.UslugaBIRzewnPubl.DaneSzukajPodmiotyRequest request)
+        public System.Threading.Tasks.Task<NGus.Services.UslugaBIRzewnPubl.DaneSzukajPodmiotyResponse> DaneSzukajPodmiotyAsync(NGus.Services.UslugaBIRzewnPubl.DaneSzukajPodmiotyRequest request)
         {
             return base.Channel.DaneSzukajPodmiotyAsync(request);
         }
         
-        public System.Threading.Tasks.Task<InvoicePro.Api.Services.UslugaBIRzewnPubl.DanePobierzPelnyRaportResponse> DanePobierzPelnyRaportAsync(InvoicePro.Api.Services.UslugaBIRzewnPubl.DanePobierzPelnyRaportRequest request)
+        public System.Threading.Tasks.Task<NGus.Services.UslugaBIRzewnPubl.DanePobierzPelnyRaportResponse> DanePobierzPelnyRaportAsync(NGus.Services.UslugaBIRzewnPubl.DanePobierzPelnyRaportRequest request)
         {
             return base.Channel.DanePobierzPelnyRaportAsync(request);
         }
         
-        public System.Threading.Tasks.Task<InvoicePro.Api.Services.UslugaBIRzewnPubl.DanePobierzRaportZbiorczyResponse> DanePobierzRaportZbiorczyAsync(InvoicePro.Api.Services.UslugaBIRzewnPubl.DanePobierzRaportZbiorczyRequest request)
+        public System.Threading.Tasks.Task<NGus.Services.UslugaBIRzewnPubl.DanePobierzRaportZbiorczyResponse> DanePobierzRaportZbiorczyAsync(NGus.Services.UslugaBIRzewnPubl.DanePobierzRaportZbiorczyRequest request)
         {
             return base.Channel.DanePobierzRaportZbiorczyAsync(request);
         }

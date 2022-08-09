@@ -3,10 +3,10 @@ using System.Linq;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.Threading.Tasks;
-using InvoicePro.Api.Services.UslugaBIRzewnPubl;
 using NGus.Enumerations;
 using NGus.Helpers;
 using NGus.Models;
+using NGus.Services.UslugaBIRzewnPubl;
 using WcfCoreMtomEncoder;
 
 namespace NGus.Contexts

@@ -9,7 +9,7 @@
     ],
     "messageContract": true,
     "namespaceMappings": [
-      "*, InvoicePro.Api.Services.UslugaBIRzewnPubl"
+      "*, NGus.Services.UslugaBIRzewnPubl"
     ],
     "targetFramework": "net6.0",
     "typeReuseMode": "None"
